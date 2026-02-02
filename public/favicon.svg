@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="dropGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield background -->
+  <path d="M50 5 L90 20 L90 50 C90 75 70 90 50 95 C30 90 10 75 10 50 L10 20 Z" fill="url(#dropGradient)"/>
+  <!-- Water drop with X (anti-leak) -->
+  <path d="M50 25 C50 25 35 45 35 55 C35 65 42 72 50 72 C58 72 65 65 65 55 C65 45 50 25 50 25 Z" fill="white"/>
+  <!-- Check mark -->
+  <path d="M40 55 L47 62 L62 47" stroke="#10b981" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
