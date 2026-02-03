@@ -39,7 +39,7 @@ const Header = () => {
     <header
       className={`header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg py-3"
+          ? "bg-white/80 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -81,14 +81,14 @@ const Header = () => {
           <div className="flex flex-col">
             <span
               className={`font-heading font-bold text-lg md:text-xl transition-colors ${
-                isScrolled ? "text-[var(--color-primary)]" : "text-white"
+                isScrolled ? "text-[#1e3a5f]" : "text-white"
               }`}
             >
               AntiLeak SG
             </span>
             <span
               className={`text-xs hidden md:block transition-colors ${
-                isScrolled ? "text-[var(--color-text-muted)]" : "text-white/70"
+                isScrolled ? "text-[#6b7280]" : "text-white/70"
               }`}
             >
               Bathroom Renewal Specialist
@@ -102,8 +102,8 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`font-medium transition-colors hover:text-[var(--color-secondary)] ${
-                isScrolled ? "text-[var(--color-text-dark)]" : "text-white"
+              className={`font-medium transition-colors hover:text-[#2563eb] ${
+                isScrolled ? "text-[#1f2937]" : "text-white"
               }`}
             >
               {link.name}
@@ -117,7 +117,7 @@ const Header = () => {
             href={`tel:${whatsappNumber}`}
             className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all ${
               isScrolled
-                ? "text-[var(--color-primary)] hover:bg-[var(--color-bg-gray)]"
+                ? "text-[#1e3a5f] hover:bg-[#f3f4f6]"
                 : "text-white hover:bg-white/10"
             }`}
           >
@@ -140,7 +140,7 @@ const Header = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className={`lg:hidden p-2 rounded-lg transition-colors ${
             isScrolled
-              ? "text-[var(--color-primary)] hover:bg-[var(--color-bg-gray)]"
+              ? "text-[#1e3a5f] hover:bg-[#f3f4f6]"
               : "text-white hover:bg-white/10"
           }`}
           aria-label="Toggle menu"
@@ -165,12 +165,12 @@ const Header = () => {
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="px-4 py-3 text-[var(--color-text-dark)] font-medium hover:bg-[var(--color-bg-gray)] rounded-lg transition-colors"
+              className="px-4 py-3 text-[#1f2937] font-medium hover:bg-[#f3f4f6] rounded-lg transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <hr className="my-2 border-[var(--color-bg-gray)]" />
+          <hr className="my-2 border-[#f3f4f6]" />
           <a
             href={whatsappLink}
             target="_blank"

@@ -54,12 +54,12 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-dark)] via-[var(--color-primary)] to-[var(--color-secondary)]">
+      <div className="absolute inset-0 bg-linear-to-br from-[#132840] via-[#1e3a5f] to-[#2563eb]">
         {/* Animated background shapes */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[var(--color-secondary)] opacity-20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[#2563eb] opacity-20 rounded-full blur-3xl animate-pulse"></div>
           <div
-            className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-[var(--color-accent)] opacity-10 rounded-full blur-3xl animate-pulse"
+            className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-[#10b981] opacity-10 rounded-full blur-3xl animate-pulse"
             style={{ animationDelay: "1s" }}
           ></div>
         </div>
@@ -75,37 +75,37 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 pt-24 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container relative z-10 pt-16 pb-16">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Label */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-[var(--color-accent)] rounded-full animate-pulse"></span>
+            <span className="w-2 h-2 bg-[#10b981] rounded-full animate-pulse"></span>
             Singapore's Anti-Leak Bathroom Specialist
           </div>
 
           {/* Headline */}
-          <h1 className="hero-headline text-white mb-6 leading-tight">
-            Don't Just Renovate.{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent-light)] to-[var(--color-accent)]">
+          <h1 className="text-[#34d399]! hero-headline mb-3 lg:mb-6 leading-tight">
+            Don't Just Renovate.{" "} <br />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#34d399] to-[#10b981]">
               Eliminate Leaks Permanently.
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="hero-subheadline text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="hero-subheadline text-xl md:text-2xl text-white! mb-8 max-w-3xl mx-auto leading-relaxed">
             The Only Bathroom Renewal Service in Singapore Designed to Prevent
             Water Seepage & Failure. We are not general contractors. We are{" "}
             <strong className="text-white">Anti-Leak Specialists</strong>.
           </p>
 
           {/* Trust Badges */}
-          <div className="hero-badges flex flex-wrap justify-center gap-3 mb-10">
+          <div className="hero-badges flex flex-wrap justify-center gap-3 mb-8 lg:mb-10">
             {trustBadges.map((badge, index) => (
               <div
                 key={index}
                 className="trust-badge bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-full flex items-center gap-2"
               >
-                <FaCheckCircle className="w-4 h-4 text-[var(--color-accent)]" />
+                <FaCheckCircle className="w-4 h-4 text-[#10b981]" />
                 <span className="text-sm font-medium">{badge}</span>
               </div>
             ))}
@@ -122,7 +122,7 @@ const HeroSection = () => {
               <FaWhatsapp className="w-6 h-6" />
               Get a Free Site Assessment
             </a>
-            <p className="mt-4 text-white/60 text-sm">
+            <p className="mt-4 text-white! text-sm">
               📍 Serving all areas in Singapore • HDB & Condo
             </p>
           </div>
@@ -130,12 +130,12 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
+      <div className="hidden absolute bottom-8 left-1/2 -translate-x-1/2 sm:flex flex-col items-center gap-2 text-white/80 pb-10">
         <span className="text-xs uppercase tracking-widest">
           Scroll to explore
         </span>
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-3 bg-white/50 rounded-full animate-bounce"></div>
+        <div className="w-6 h-10 border-2 border-white/80 rounded-full flex justify-center pt-2">
+          <div className="w-1 h-3 bg-white/80 rounded-full animate-bounce"></div>
         </div>
       </div>
     </section>

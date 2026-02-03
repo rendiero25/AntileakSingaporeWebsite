@@ -2,6 +2,9 @@ import { useEffect, useRef } from "react";
 import { FaStar, FaQuoteLeft, FaMapMarkerAlt } from "react-icons/fa";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import JasonPhoto from "../assets/testimonialPhoto/jason.jpg";
+import DavidPhoto from "../assets/testimonialPhoto/david.jpg";
+import SarahPhoto from "../assets/testimonialPhoto/sarah.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,7 +58,7 @@ const TestimonialSection = () => {
       rating: 5,
       quote:
         "After 2 renovations with other contractors failed to stop the leak to my neighbor's unit, AntiLeak SG fixed it once and for all. Their approach is totally different.",
-      image: null,
+      image: JasonPhoto,
     },
     {
       name: "Sarah Lim",
@@ -63,7 +66,7 @@ const TestimonialSection = () => {
       rating: 5,
       quote:
         "The thermal detection showed exactly where the old waterproofing had failed. No one else bothered to do this. Professional and thorough from start to finish.",
-      image: null,
+      image: SarahPhoto,
     },
     {
       name: "David Wong",
@@ -71,7 +74,7 @@ const TestimonialSection = () => {
       rating: 5,
       quote:
         "Worth every dollar. My bathroom looks great AND I have peace of mind knowing it won't leak. The flood test at the end was impressive - they really stand behind their work.",
-      image: null,
+      image: DavidPhoto,
     },
   ];
 
@@ -79,22 +82,20 @@ const TestimonialSection = () => {
     <section
       id="testimonials"
       ref={sectionRef}
-      className="bg-gradient-to-br from-[var(--color-primary)] via-[var(--color-primary-dark)] to-[var(--color-bg-dark)] text-white relative overflow-hidden"
+      className="bg-linear-to-br from-[#1e3a5f] via-[#132840] to-[#0f172a] text-white relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[var(--color-secondary)] opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[var(--color-accent)] opacity-5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[#2563eb] opacity-10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[#10b981] opacity-5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container relative">
         {/* Section Header */}
         <div className="section-header text-center">
-          <span className="section-label text-[var(--color-accent)]">
-            Testimonials
-          </span>
-          <h2 className="text-white mb-4">Trusted by Singapore Homeowners</h2>
-          <p className="text-white/70 text-lg">
+          <span className="section-label text-[#10b981]">Testimonials</span>
+          <h2 className="text-white! mb-4">Trusted by Singapore Homeowners</h2>
+          <p className="text-white/80! text-lg">
             Real feedback from homeowners who chose permanent leak prevention
             over cosmetic fixes.
           </p>
@@ -105,11 +106,11 @@ const TestimonialSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[var(--color-accent)] hover:bg-white/15 transition-all group"
+              className="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#10b981] hover:bg-white/15 transition-all group"
             >
               {/* Quote Icon */}
               <div className="mb-6">
-                <FaQuoteLeft className="w-10 h-10 text-[var(--color-accent)] opacity-50" />
+                <FaQuoteLeft className="w-10 h-10 text-[#10b981] opacity-50" />
               </div>
 
               {/* Rating */}
@@ -127,8 +128,12 @@ const TestimonialSection = () => {
               {/* Author */}
               <div className="flex items-center gap-4 pt-4 border-t border-white/10">
                 {/* Avatar placeholder */}
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-secondary)] to-[var(--color-primary)] flex items-center justify-center text-white font-bold text-lg">
-                  {testimonial.name.charAt(0)}
+                <div className="w-12 h-12 rounded-full flex items-center justify-center">
+                  <img
+                    src={testimonial.image}
+                    alt={`${testimonial.name} Photo`}
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-white">
@@ -153,7 +158,7 @@ const TestimonialSection = () => {
             { value: "10+", label: "Years Experience" },
           ].map((stat, index) => (
             <div key={index} className="p-4">
-              <div className="text-4xl lg:text-5xl font-bold text-[var(--color-accent)] mb-2">
+              <div className="text-4xl lg:text-5xl font-bold text-[#10b981] mb-2">
                 {stat.value}
               </div>
               <div className="text-white/60 text-sm">{stat.label}</div>

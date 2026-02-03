@@ -53,21 +53,21 @@ const ProblemSection = () => {
       title: "The Hidden Danger",
       description:
         'Many "aesthetic" renovations are merely cosmetic covers over potential disasters. They look good on day one, but hidden cracks and poor waterproofing lead to ceiling leaks later.',
-      color: "var(--color-warning)",
+      color: "#f59e0b",
     },
     {
       icon: FaTools,
       title: "The Common Trap",
       description:
         "Focusing on tiles and vanity units while neglecting the sub-floor waterproofing. Most contractors prioritize looks over leak prevention.",
-      color: "var(--color-danger)",
+      color: "#ef4444",
     },
     {
       icon: FaShieldAlt,
       title: "Our Solution",
       description:
         "A renovation engineered around failure prevention. We fix the root cause and remove ambiguity before work starts—not after problems appear.",
-      color: "var(--color-accent)",
+      color: "#10b981",
     },
   ];
 
@@ -75,10 +75,10 @@ const ProblemSection = () => {
     <section
       id="problem"
       ref={sectionRef}
-      className="bg-[var(--color-bg-gray)] relative overflow-hidden"
+      className="bg-[#f3f4f6] relative overflow-hidden"
     >
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-secondary)] opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#2563eb] opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
       <div className="container">
         {/* Section Header */}
@@ -86,7 +86,7 @@ const ProblemSection = () => {
           <span className="section-label">The Problem</span>
           <h2 className="mb-4">
             Why Most Bathroom Renovations{" "}
-            <span className="text-[var(--color-danger)]">Fail</span> Within 3
+            <span className="text-[#ef4444]">Fail</span> Within 3
             Years
           </h2>
           <p className="text-lg max-w-2xl mx-auto">
@@ -113,10 +113,10 @@ const ProblemSection = () => {
                   style={{ color: problem.color }}
                 />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[var(--color-primary)]">
+              <h3 className="text-xl font-bold mb-3 text-[#1e3a5f]">
                 {problem.title}
               </h3>
-              <p className="text-[var(--color-text-muted)] leading-relaxed">
+              <p className="text-[#6b7280] leading-relaxed">
                 {problem.description}
               </p>
             </div>

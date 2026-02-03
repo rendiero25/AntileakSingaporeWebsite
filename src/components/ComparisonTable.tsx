@@ -113,7 +113,7 @@ const ComparisonTable = () => {
     <section
       id="comparison"
       ref={sectionRef}
-      className="bg-[var(--color-bg-gray)] relative overflow-hidden"
+      className="bg-[#f3f4f6] relative overflow-hidden"
     >
       <div className="container">
         {/* Section Header */}
@@ -121,7 +121,7 @@ const ComparisonTable = () => {
           <span className="section-label">The Comparison</span>
           <h2 className="mb-4">
             General Renovation vs.{" "}
-            <span className="text-[var(--color-secondary)]">AntiLeak SG</span>
+            <span className="text-[#2563eb]">AntiLeak SG</span>
           </h2>
           <p className="text-lg">
             See the difference between typical interior designers and our
@@ -134,7 +134,7 @@ const ComparisonTable = () => {
           {/* Desktop Table */}
           <div className="hidden md:block bg-white rounded-2xl shadow-xl overflow-hidden">
             {/* Header Row */}
-            <div className="grid grid-cols-3 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)]">
+            <div className="grid grid-cols-3 bg-gradient-to-r from-[#1e3a5f] to-[#2563eb]">
               <div className="p-6 text-white font-semibold">Feature</div>
               <div className="p-6 text-white/80 text-center font-semibold border-l border-white/20">
                 Typical Interior Designer
@@ -149,21 +149,21 @@ const ComparisonTable = () => {
               <div
                 key={index}
                 className={`comparison-row grid grid-cols-3 ${
-                  index % 2 === 0 ? "bg-white" : "bg-[var(--color-bg-gray)]"
+                  index % 2 === 0 ? "bg-white" : "bg-[#f3f4f6]"
                 } hover:bg-blue-50 transition-colors`}
               >
-                <div className="p-5 font-medium text-[var(--color-primary)] border-b border-gray-100">
+                <div className="p-5 font-medium text-[#1e3a5f] border-b border-gray-100">
                   {item.feature}
                 </div>
                 <div className="p-5 text-center border-l border-b border-gray-100 flex items-center justify-center gap-2">
                   <FaTimes className="w-4 h-4 text-red-400" />
-                  <span className="text-[var(--color-text-muted)]">
+                  <span className="text-[#6b7280]">
                     {item.typical}
                   </span>
                 </div>
                 <div className="p-5 text-center border-l border-b border-gray-100 bg-green-50/50 flex items-center justify-center gap-2">
-                  <FaCheck className="w-4 h-4 text-[var(--color-accent)]" />
-                  <span className="text-[var(--color-primary)] font-medium">
+                  <FaCheck className="w-4 h-4 text-[#10b981]" />
+                  <span className="text-[#1e3a5f] font-medium">
                     {item.antileak}
                   </span>
                 </div>
@@ -178,7 +178,7 @@ const ComparisonTable = () => {
                 key={index}
                 className="comparison-row bg-white rounded-xl p-5 shadow-lg"
               >
-                <div className="font-bold text-[var(--color-primary)] mb-4 pb-3 border-b">
+                <div className="font-bold text-[#1e3a5f] mb-4 pb-3 border-b">
                   {item.feature}
                 </div>
                 <div className="space-y-3">
@@ -188,18 +188,18 @@ const ComparisonTable = () => {
                       <div className="text-xs text-red-400 font-medium mb-1">
                         Typical
                       </div>
-                      <div className="text-sm text-[var(--color-text-muted)]">
+                      <div className="text-sm text-[#6b7280]">
                         {item.typical}
                       </div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
-                    <FaCheck className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
+                    <FaCheck className="w-4 h-4 text-[#10b981] mt-0.5 flex-shrink-0" />
                     <div>
-                      <div className="text-xs text-[var(--color-accent)] font-medium mb-1">
+                      <div className="text-xs text-[#10b981] font-medium mb-1">
                         AntiLeak SG
                       </div>
-                      <div className="text-sm text-[var(--color-primary)] font-medium">
+                      <div className="text-sm text-[#1e3a5f] font-medium">
                         {item.antileak}
                       </div>
                     </div>

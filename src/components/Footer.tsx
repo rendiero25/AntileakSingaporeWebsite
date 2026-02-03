@@ -30,10 +30,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[var(--color-bg-dark)] text-white">
+    <footer className="bg-[#0f172a] text-white">
       {/* Main Footer */}
       <div className="container py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             {/* Logo */}
@@ -80,7 +80,7 @@ const Footer = () => {
               </div>
             </a>
 
-            <p className="text-white/60 text-sm leading-relaxed mb-6">
+            <p className="text-white! text-sm leading-relaxed mb-6 lg:max-w-md">
               Singapore's dedicated Anti-Leak Bathroom Renewal Specialist. We
               deliver full bathroom overhauls with a standardized process to
               ensure your toilet never leaks again.
@@ -92,7 +92,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--color-secondary)] transition-colors"
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#2563eb] transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
@@ -108,7 +108,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-white/60 hover:text-white hover:pl-1 transition-all"
+                    className="text-white/80 hover:text-white hover:pl-1 transition-all"
                   >
                     {link.name}
                   </a>
@@ -138,9 +138,9 @@ const Footer = () => {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-white/60 hover:text-[var(--color-accent)] transition-colors"
+                  className="flex items-center gap-3 text-white/60 hover:text-[#10b981] transition-colors"
                 >
-                  <FaWhatsapp className="w-5 h-5 text-[var(--color-accent)]" />
+                  <FaWhatsapp className="w-5 h-5 text-[#10b981]" />
                   +65 8888 8888
                 </a>
               </li>
@@ -179,8 +179,16 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/50 text-sm text-center md:text-left">
-            © {currentYear} AntiLeak SG. All rights reserved. | Singapore's
-            Anti-Leak Bathroom Specialist
+            © {currentYear} AntiLeak SG. All rights reserved. Singapore's
+            Anti-Leak Bathroom Specialist | developed by{" "}
+            <a
+              href="https://www.rendiero.site"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-white!"
+            >
+              rendiero.
+            </a>
           </p>
           <div className="flex gap-6 text-sm text-white/50">
             <a href="#" className="hover:text-white transition-colors">

@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Asus from "../assets/partnersLogo/asus.png";
+import Bosch from "../assets/partnersLogo/bosch.png";
+import Ebay from "../assets/partnersLogo/ebay.png";
+import Thinkpad from "../assets/partnersLogo/thinkpad.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,84 +51,52 @@ const PartnersSection = () => {
 
   const partners = [
     {
-      name: "SIKA",
+      name: "ASUS",
       role: "Waterproofing Membrane & Chemical Integrity",
       logo: (
-        <svg viewBox="0 0 120 40" className="h-10 w-auto">
-          <text
-            x="10"
-            y="30"
-            className="fill-[var(--color-primary)] font-bold text-2xl"
-          >
-            SIKA
-          </text>
-        </svg>
+        <img src={Asus} alt="Asus Logo" className="w-50 object-cover"/>
       ),
     },
     {
       name: "BOSCH",
       role: "Precision Hacking & Drilling",
       logo: (
-        <svg viewBox="0 0 120 40" className="h-10 w-auto">
-          <text
-            x="10"
-            y="30"
-            className="fill-[var(--color-primary)] font-bold text-2xl"
-          >
-            BOSCH
-          </text>
-        </svg>
+        <img src={Bosch} alt="Bosch Logo" className="w-50 object-cover"/>
       ),
     },
     {
-      name: "RUBI",
+      name: "EBAY",
       role: "Precision Tile Cutting",
       logo: (
-        <svg viewBox="0 0 120 40" className="h-10 w-auto">
-          <text
-            x="10"
-            y="30"
-            className="fill-[var(--color-primary)] font-bold text-2xl"
-          >
-            RUBI
-          </text>
-        </svg>
+        <img src={Ebay} alt="Asus Logo" className="w-50 object-cover"/>
       ),
     },
     {
-      name: "MAKITA",
+      name: "THINKPAD",
       role: "Heavy-duty Construction Tools",
       logo: (
-        <svg viewBox="0 0 120 40" className="h-10 w-auto">
-          <text
-            x="10"
-            y="30"
-            className="fill-[var(--color-primary)] font-bold text-2xl"
-          >
-            MAKITA
-          </text>
-        </svg>
+        <img src={Thinkpad} alt="Asus Logo" className="w-50 object-cover"/>
       ),
     },
   ];
 
   // Duplicate partners for infinite scroll
-  const allPartners = [...partners, ...partners];
+  const allPartners = [...partners, ...partners, ...partners];
 
   return (
     <section
       id="partners"
       ref={sectionRef}
-      className="bg-gradient-to-b from-[var(--color-bg-dark)] to-[var(--color-primary-dark)] text-white py-20 overflow-hidden"
+      className="bg-linear-to-b from-[#0f172a] to-[#132840] text-white py-20 overflow-hidden"
     >
       <div className="container">
         {/* Section Header */}
         <div className="section-header text-center mb-12">
-          <span className="section-label text-[var(--color-accent)]">
+          <span className="section-label text-[#10b981]">
             Industrial Partners
           </span>
-          <h2 className="text-white mb-4">Global Quality. Zero Compromise.</h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
+          <h2 className="text-white! mb-4">Global Quality. Zero Compromise.</h2>
+          <p className="text-white/70! max-w-2xl mx-auto">
             We are proud to work with global leaders to bring the best tools and
             waterproofing materials to your home. Every layer of your bathroom
             is built using industrial-grade solutions.
@@ -132,7 +104,7 @@ const PartnersSection = () => {
         </div>
 
         {/* Small label */}
-        <p className="text-center text-white/50 text-sm uppercase tracking-widest mb-8">
+        <p className="text-center text-white! text-sm uppercase tracking-widest mb-8">
           Proudly Using Quality Brands
         </p>
       </div>
@@ -140,8 +112,8 @@ const PartnersSection = () => {
       {/* Partner Logo Slider */}
       <div className="relative">
         {/* Gradient overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[var(--color-bg-dark)] to-transparent z-10"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[var(--color-primary-dark)] to-transparent z-10"></div>
+        {/* <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-[#0f172a] to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-[#132840] to-transparent z-10"></div> */}
 
         <div
           ref={sliderRef}
@@ -151,13 +123,16 @@ const PartnersSection = () => {
           {allPartners.map((partner, index) => (
             <div
               key={index}
-              className="partner-slide flex-shrink-0 bg-white/10 backdrop-blur-sm rounded-xl p-6 px-10 border border-white/10 hover:border-[var(--color-accent)] hover:bg-white/20 transition-all group cursor-pointer"
+              className="partner-slide shrink-0 p-5 hover:border-[#10b981] hover:bg-white/20 transition-all group cursor-pointer"
             >
-              <div className="flex flex-col items-center gap-2">
-                <div className="text-2xl font-bold text-white group-hover:text-[var(--color-accent)] transition-colors">
+              <div className="flex flex-col items-center justify-start">
+                <div>{partner.logo}</div>
+
+                {/* <div className="text-2xl font-bold text-white group-hover:text-[#10b981] transition-colors">
                   {partner.name}
-                </div>
-                <div className="text-xs text-white/50 text-center max-w-[150px]">
+                </div> */}
+
+                <div className="text-sm text-white/80 text-center max-w-[150px]">
                   {partner.role}
                 </div>
               </div>

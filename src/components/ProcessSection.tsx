@@ -104,7 +104,7 @@ const ProcessSection = () => {
       className="bg-white relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[var(--color-bg-gray)] to-transparent opacity-50"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#f3f4f6] to-transparent opacity-50"></div>
 
       <div className="container relative">
         {/* Section Header */}
@@ -112,7 +112,7 @@ const ProcessSection = () => {
           <span className="section-label">Our Process</span>
           <h2 className="mb-4">
             How We Guarantee a{" "}
-            <span className="text-[var(--color-secondary)]">Leak-Free</span>{" "}
+            <span className="text-[#2563eb]">Leak-Free</span>{" "}
             Bathroom
           </h2>
           <p className="text-lg">
@@ -124,7 +124,7 @@ const ProcessSection = () => {
         {/* Process Timeline */}
         <div className="process-timeline relative max-w-4xl mx-auto">
           {/* Vertical timeline line - desktop only */}
-          <div className="timeline-line hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[var(--color-secondary)] to-[var(--color-primary)] -translate-x-1/2 origin-top rounded-full"></div>
+          <div className="timeline-line hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#2563eb] to-[#1e3a5f] -translate-x-1/2 origin-top rounded-full"></div>
 
           {/* Steps */}
           <div className="space-y-8 lg:space-y-16">
@@ -142,7 +142,7 @@ const ProcessSection = () => {
                   }`}
                 >
                   <div
-                    className={`bg-white rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100 hover:border-[var(--color-secondary)] hover:shadow-xl transition-all ${
+                    className={`bg-white rounded-2xl p-6 lg:p-8 shadow-lg border-2 border-gray-100 hover:border-[#2563eb] hover:shadow-xl transition-all ${
                       index % 2 === 0 ? "lg:mr-8" : "lg:ml-8"
                     }`}
                   >
@@ -160,11 +160,11 @@ const ProcessSection = () => {
                           style={{ color: step.color }}
                         />
                       </div>
-                      <h3 className="text-xl font-bold text-[var(--color-primary)]">
+                      <h3 className="text-xl font-bold text-[#1e3a5f]">
                         {step.title}
                       </h3>
                     </div>
-                    <p className="text-[var(--color-text-muted)] leading-relaxed">
+                    <p className="text-[#6b7280] leading-relaxed">
                       {step.description}
                     </p>
                   </div>

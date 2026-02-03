@@ -39,12 +39,12 @@ const CTASection = () => {
       className="relative py-20 lg:py-28 overflow-hidden"
     >
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-secondary)] via-[var(--color-primary)] to-[var(--color-primary-dark)]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2563eb] via-[#1e3a5f] to-[#132840]">
         {/* Animated shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-1/4 w-72 h-72 bg-white opacity-5 rounded-full blur-3xl animate-pulse"></div>
           <div
-            className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--color-accent)] opacity-10 rounded-full blur-3xl animate-pulse"
+            className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#10b981] opacity-10 rounded-full blur-3xl animate-pulse"
             style={{ animationDelay: "1s" }}
           ></div>
         </div>
@@ -61,15 +61,13 @@ const CTASection = () => {
       <div className="container relative">
         <div className="cta-content max-w-3xl mx-auto text-center text-white">
           {/* Heading */}
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white! leading-tight">
             Stop The Leaks.{" "}
-            <span className="text-[var(--color-accent-light)]">
-              Start The Renewal.
-            </span>
+            <span className="text-[#34d399]">Start The Renewal.</span>
           </h2>
 
           {/* Subheading */}
-          <p className="text-xl text-white/80 mb-10 leading-relaxed">
+          <p className="text-xl text-white/80! mb-10 leading-relaxed">
             Don't wait for the ceiling to drip. Secure your home with
             Singapore's dedicated Anti-Leak Specialist. Get a free,
             no-obligation site assessment today.
@@ -98,15 +96,15 @@ const CTASection = () => {
           {/* Benefits reminder */}
           <div className="flex flex-wrap justify-center gap-6 text-white/70 text-sm">
             <div className="flex items-center gap-2">
-              <FaArrowRight className="w-3 h-3 text-[var(--color-accent)]" />
+              <FaArrowRight className="w-3 h-3 text-[#10b981]" />
               Free Site Assessment
             </div>
             <div className="flex items-center gap-2">
-              <FaArrowRight className="w-3 h-3 text-[var(--color-accent)]" />
+              <FaArrowRight className="w-3 h-3 text-[#10b981]" />
               No Hidden Costs
             </div>
             <div className="flex items-center gap-2">
-              <FaArrowRight className="w-3 h-3 text-[var(--color-accent)]" />
+              <FaArrowRight className="w-3 h-3 text-[#10b981]" />
               Warranty Included
             </div>
           </div>

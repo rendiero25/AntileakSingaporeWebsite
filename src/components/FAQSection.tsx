@@ -94,7 +94,7 @@ const FAQSection = () => {
     <section
       id="faq"
       ref={sectionRef}
-      className="bg-[var(--color-bg-gray)] relative overflow-hidden"
+      className="bg-[#f3f4f6] relative overflow-hidden"
     >
       <div className="container">
         {/* Section Header */}
@@ -102,7 +102,7 @@ const FAQSection = () => {
           <span className="section-label">FAQ</span>
           <h2 className="mb-4">
             Frequently Asked Questions About{" "}
-            <span className="text-[var(--color-secondary)]">
+            <span className="text-[#2563eb]">
               Bathroom Leaks
             </span>
           </h2>
@@ -119,7 +119,7 @@ const FAQSection = () => {
               key={index}
               className={`faq-item bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 ${
                 openIndex === index
-                  ? "ring-2 ring-[var(--color-secondary)]"
+                  ? "ring-2 ring-[#2563eb]"
                   : ""
               }`}
             >
@@ -129,11 +129,11 @@ const FAQSection = () => {
                 className="w-full flex items-center justify-between p-5 lg:p-6 text-left hover:bg-gray-50 transition-colors"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-semibold text-[var(--color-primary)] pr-4 text-lg">
+                <span className="font-semibold text-[#1e3a5f] pr-4 text-lg">
                   {faq.question}
                 </span>
                 <FaChevronDown
-                  className={`w-5 h-5 text-[var(--color-secondary)] flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-[#2563eb] flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />
@@ -145,7 +145,7 @@ const FAQSection = () => {
                   openIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
-                <div className="p-5 lg:p-6 pt-0 text-[var(--color-text-muted)] leading-relaxed">
+                <div className="p-5 lg:p-6 pt-0 text-[#6b7280] leading-relaxed">
                   {faq.answer}
                 </div>
               </div>
@@ -155,14 +155,14 @@ const FAQSection = () => {
 
         {/* Additional help text */}
         <div className="text-center mt-12">
-          <p className="text-[var(--color-text-muted)] mb-4">
+          <p className="text-[#6b7280] mb-4">
             Still have questions? We're here to help!
           </p>
           <a
             href="https://wa.me/6588888888"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[var(--color-secondary)] font-semibold hover:underline"
+            className="inline-flex items-center gap-2 text-[#2563eb] font-semibold hover:underline"
           >
             Chat with us on WhatsApp →
           </a>

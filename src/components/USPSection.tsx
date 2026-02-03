@@ -86,7 +86,7 @@ const USPSection = () => {
       className="bg-white relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-primary)] opacity-5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-linear-to-r from-[#2563eb] to-[#1e3a5f] opacity-5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
       <div className="container">
         {/* Section Header */}
@@ -94,7 +94,7 @@ const USPSection = () => {
           <span className="section-label">Our Difference</span>
           <h2 className="mb-4">
             Engineered for{" "}
-            <span className="text-[var(--color-secondary)]">Dryness</span>
+            <span className="text-[#2563eb]">Dryness</span>
           </h2>
           <p className="text-lg">
             Function Over Form. Reliability Over Aesthetics.
@@ -109,23 +109,23 @@ const USPSection = () => {
           {usps.map((usp, index) => (
             <div
               key={index}
-              className="usp-card group relative bg-gradient-to-br from-[var(--color-bg-light)] to-[var(--color-bg-gray)] rounded-2xl p-8 border border-gray-100 hover:border-[var(--color-secondary)] hover:shadow-xl transition-all duration-300"
+              className="usp-card group relative bg-linear-to-br from-[#ffffff] to-[#f3f4f6] rounded-2xl p-8 border border-gray-100 hover:border-[#2563eb] hover:shadow-xl transition-all duration-300"
             >
               {/* Number badge */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-[var(--color-secondary)] to-[var(--color-primary)] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
+              {/* <div className="absolute -top-4 -right-4 w-16 h-16 bg-linear-to-br from-[#2563eb] to-[#1e3a5f] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
                 {usp.number}
-              </div>
+              </div> */}
 
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-[var(--color-secondary)] to-[var(--color-primary)] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 bg-linear-to-br from-[#2563eb] to-[#1e3a5f] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <usp.icon className="w-8 h-8 text-white" />
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold mb-4 text-[var(--color-primary)]">
+              <h3 className="text-xl font-bold mb-4 text-[#1e3a5f]">
                 {usp.title}
               </h3>
-              <p className="text-[var(--color-text-muted)] mb-6 leading-relaxed">
+              <p className="text-[#6b7280] mb-6 leading-relaxed">
                 {usp.description}
               </p>
 
@@ -134,7 +134,7 @@ const USPSection = () => {
                 {usp.features.map((feature, fIndex) => (
                   <span
                     key={fIndex}
-                    className="px-3 py-1 bg-[var(--color-secondary)]/10 text-[var(--color-secondary)] text-sm font-medium rounded-full"
+                    className="px-3 py-1 bg-[#2563eb]/10 text-[#2563eb] text-sm font-medium rounded-full"
                   >
                     {feature}
                   </span>
