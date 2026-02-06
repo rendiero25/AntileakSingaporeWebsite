@@ -46,7 +46,7 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 md:w-12 md:h-12 relative">
+          {/* <div className="w-10 h-10 md:w-12 md:h-12 relative">
             <svg viewBox="0 0 100 100" className="w-full h-full">
               <defs>
                 <linearGradient
@@ -77,22 +77,22 @@ const Header = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </div> */}
           <div className="flex flex-col">
             <span
-              className={`font-heading font-bold text-lg md:text-xl transition-colors ${
+              className={`font-heading uppercase font-bold text-lg md:text-xl transition-colors ${
                 isScrolled ? "text-[#1e3a5f]" : "text-white"
               }`}
             >
-              AntiLeak SG
+              Reno Express
             </span>
-            <span
+            {/* <span
               className={`text-xs hidden md:block transition-colors ${
                 isScrolled ? "text-[#6b7280]" : "text-white/70"
               }`}
             >
               Bathroom Renewal Specialist
-            </span>
+            </span> */}
           </div>
         </a>
 
