@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import ProblemSection from "./components/ProblemSection";
-import USPSection from "./components/USPSection";
+import PricesSection from "./components/PricesSection";
 import PartnersSection from "./components/PartnersSection";
 import ComparisonTable from "./components/ComparisonTable";
 import ProcessSection from "./components/ProcessSection";
@@ -65,7 +65,7 @@ function App() {
         <ProblemSection />
 
         {/* Unique Selling Proposition Section */}
-        <USPSection />
+        <PricesSection />
 
         {/* Industrial Partners Section */}
         <PartnersSection />
