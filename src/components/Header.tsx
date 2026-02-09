@@ -25,10 +25,13 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
     { name: "Why Us", href: "#problem" },
+    { name: "Packages", href: "#prices" },
+    { name: "Quality Products", href: "#quality-products" },
+    // { name: "Partners", href: "#partners" },
+    // { name: "Comparison", href: "#comparison" },
     { name: "Process", href: "#process" },
-    { name: "Partners", href: "#partners" },
+    
     { name: "FAQ", href: "#faq" },
   ];
 

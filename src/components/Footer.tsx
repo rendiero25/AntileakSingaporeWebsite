@@ -14,10 +14,10 @@ const Footer = () => {
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`;
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
     { name: "Why Us", href: "#problem" },
-    { name: "Our Process", href: "#process" },
-    { name: "Partners", href: "#partners" },
+    { name: "Packages", href: "#prices" },
+    { name: "Quality Products", href: "#quality-products" },
+    { name: "Process", href: "#process" },
     { name: "FAQ", href: "#faq" },
   ];
 
@@ -141,19 +141,11 @@ const Footer = () => {
                   className="flex items-center gap-3 text-white/60 hover:text-[#10b981] transition-colors"
                 >
                   <FaWhatsapp className="w-5 h-5 text-[#10b981]" />
-                  +65 8888 8888
+                  +65 9121 8788
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+6588888888"
-                  className="flex items-center gap-3 text-white/60 hover:text-white transition-colors"
-                >
-                  <FaPhone className="w-5 h-5" />
-                  +65 8888 8888
-                </a>
-              </li>
-              <li>
+
+              {/* <li>
                 <a
                   href="mailto:hello@antileaksg.com"
                   className="flex items-center gap-3 text-white/60 hover:text-white transition-colors"
@@ -161,15 +153,15 @@ const Footer = () => {
                   <FaEnvelope className="w-5 h-5" />
                   hello@antileaksg.com
                 </a>
-              </li>
-              <li className="flex items-start gap-3 text-white/60">
+              </li> */}
+              {/* <li className="flex items-start gap-3 text-white/60">
                 <FaMapMarkerAlt className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <span>
                   Serving all areas in Singapore
                   <br />
                   HDB & Condo Specialists
                 </span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
