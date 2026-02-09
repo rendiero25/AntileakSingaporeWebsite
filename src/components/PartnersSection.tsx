@@ -47,20 +47,36 @@ const PartnersSection = () => {
       0,
     );
 
+    // Kill previous tween if exists
+    if (tweenRef.current) {
+      tweenRef.current.kill();
+    }
+
     tweenRef.current = gsap.to(slider, {
       x: -totalWidth / 2,
       duration: 30,
-      ease: "none",
+      ease: "linear",
       repeat: -1,
     });
+
+    // Cleanup on unmount
+    return () => {
+      if (tweenRef.current) {
+        tweenRef.current.kill();
+      }
+    };
   }, []);
 
   const handleMouseEnter = () => {
-    tweenRef.current?.pause();
+    if (tweenRef.current) {
+      tweenRef.current.pause();
+    }
   };
 
   const handleMouseLeave = () => {
-    tweenRef.current?.resume();
+    if (tweenRef.current) {
+      tweenRef.current.resume();
+    }
   };
 
   const partners = [
@@ -181,16 +197,23 @@ const PartnersSection = () => {
               className="partner-slide shrink-0 p-5 transition-all group cursor-pointer"
             >
               <div className="flex flex-col items-center justify-start">
-                <div>{partner.logo}</div>
-
                 <a
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-80 transition-opacity"
+                >
+                  {partner.logo}
+                </a>
+
+                {/* <a
                   href={partner.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 text-sm text-slate-500 hover:text-[#10b981] transition-colors"
                 >
                   Official Website
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
