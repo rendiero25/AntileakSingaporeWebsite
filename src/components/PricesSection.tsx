@@ -17,7 +17,13 @@ interface PricePackage {
 
 const PricesSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [activeFilter, setActiveFilter] = useState<"all" | "exposed" | "concealed">("all");
+  const [activeFilter, setActiveFilter] = useState<
+    "all" | "exposed" | "concealed"
+  >("all");
+
+  const whatsappNumber = "+6591218788";
+  const getWhatsAppLink = (packageTitle: string) =>
+    `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=Hi, I'm interested in the ${packageTitle} package. Can I get a quote?`;
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -134,9 +140,10 @@ const PricesSection = () => {
     },
   ];
 
-  const filteredPackages = activeFilter === "all" 
-    ? packages 
-    : packages.filter(pkg => pkg.pipeType === activeFilter);
+  const filteredPackages =
+    activeFilter === "all"
+      ? packages
+      : packages.filter((pkg) => pkg.pipeType === activeFilter);
 
   return (
     <section
@@ -158,8 +165,8 @@ const PricesSection = () => {
             Our <span className="text-[#2563eb]">Packages</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Complete bathroom renewal solutions with no hidden costs.
-            All prices include materials, labour, and professional installation.
+            Complete bathroom renewal solutions with no hidden costs. All prices
+            include materials, labour, and professional installation.
           </p>
         </div>
 
@@ -216,12 +223,16 @@ const PricesSection = () => {
               )}
 
               {/* Icon */}
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${
-                pkg.highlight 
-                  ? "bg-gradient-to-br from-[#2563eb] to-[#1e3a5f]" 
-                  : "bg-[#2563eb]/10"
-              }`}>
-                <pkg.icon className={`w-7 h-7 ${pkg.highlight ? "text-white" : "text-[#2563eb]"}`} />
+              <div
+                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${
+                  pkg.highlight
+                    ? "bg-gradient-to-br from-[#2563eb] to-[#1e3a5f]"
+                    : "bg-[#2563eb]/10"
+                }`}
+              >
+                <pkg.icon
+                  className={`w-7 h-7 ${pkg.highlight ? "text-white" : "text-[#2563eb]"}`}
+                />
               </div>
 
               {/* Title */}
@@ -230,12 +241,16 @@ const PricesSection = () => {
               </h3>
 
               {/* Pipe Type Badge */}
-              <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-4 ${
-                pkg.pipeType === "exposed" 
-                  ? "bg-orange-100 text-orange-700" 
-                  : "bg-purple-100 text-purple-700"
-              }`}>
-                {pkg.pipeType === "exposed" ? "Stainless Steel Pipe" : "Copper Pipe"}
+              <span
+                className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-4 ${
+                  pkg.pipeType === "exposed"
+                    ? "bg-orange-100 text-orange-700"
+                    : "bg-purple-100 text-purple-700"
+                }`}
+              >
+                {pkg.pipeType === "exposed"
+                  ? "Stainless Steel Pipe"
+                  : "Copper Pipe"}
               </span>
 
               {/* Price */}
@@ -265,7 +280,9 @@ const PricesSection = () => {
 
               {/* CTA Button */}
               <a
-                href="#contact"
+                href={getWhatsAppLink(pkg.title)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block w-full py-3 px-4 rounded-xl font-semibold text-center transition-all duration-300 ${
                   pkg.highlight
                     ? "bg-gradient-to-r from-[#2563eb] to-[#1e3a5f] text-white hover:shadow-lg hover:shadow-[#2563eb]/30"
@@ -281,7 +298,8 @@ const PricesSection = () => {
         {/* Additional Info */}
         <div className="mt-12 text-center">
           <p className="text-gray-500 text-sm">
-            * Prices are subject to site inspection. Additional charges may apply for special requirements.
+            * Prices are subject to site inspection. Additional charges may
+            apply for special requirements.
           </p>
           <p className="text-gray-500 text-sm mt-2">
             * Tiles and sanitary fittings are not included in the package price.

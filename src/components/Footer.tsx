@@ -1,8 +1,5 @@
 import {
   FaWhatsapp,
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
