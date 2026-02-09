@@ -30,7 +30,7 @@ const CTASection = () => {
     );
   }, []);
 
-  const whatsappNumber = "+6588888888";
+  const whatsappNumber = "+6591218788";
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=Hi, I'd like to schedule a site visit for bathroom renewal.`;
 
   return (

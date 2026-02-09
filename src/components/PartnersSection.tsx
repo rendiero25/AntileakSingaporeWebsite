@@ -1,10 +1,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Asus from "../assets/partnersLogo/asus.png";
-import Bosch from "../assets/partnersLogo/bosch.png";
-import Ebay from "../assets/partnersLogo/ebay.png";
-import Thinkpad from "../assets/partnersLogo/thinkpad.png";
+import Kohler from "../assets/partnersLogo/kohler.png";
+import Grohe from "../assets/partnersLogo/grohe.png";
+import Duravit from "../assets/partnersLogo/duravit.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,43 +50,34 @@ const PartnersSection = () => {
 
   const partners = [
     {
-      name: "ASUS",
-      role: "Waterproofing Membrane & Chemical Integrity",
+      name: "Kohler",
+      role: "Premium Bathroom Fixtures",
       logo: (
-        <img src={Asus} alt="Asus Logo" className="w-50 object-cover"/>
+        <img src={Kohler} alt="Kohler Logo" className="w-50 object-cover" />
       ),
     },
     {
-      name: "BOSCH",
-      role: "Precision Hacking & Drilling",
-      logo: (
-        <img src={Bosch} alt="Bosch Logo" className="w-50 object-cover"/>
-      ),
+      name: "Grohe",
+      role: "Quality Faucets & Showers",
+      logo: <img src={Grohe} alt="Grohe Logo" className="w-50 object-cover" />,
     },
     {
-      name: "EBAY",
-      role: "Precision Tile Cutting",
+      name: "Duravit",
+      role: "Designer Bathroom Ceramics",
       logo: (
-        <img src={Ebay} alt="Asus Logo" className="w-50 object-cover"/>
-      ),
-    },
-    {
-      name: "THINKPAD",
-      role: "Heavy-duty Construction Tools",
-      logo: (
-        <img src={Thinkpad} alt="Asus Logo" className="w-50 object-cover"/>
+        <img src={Duravit} alt="Duravit Logo" className="w-50 object-cover" />
       ),
     },
   ];
 
   // Duplicate partners for infinite scroll
-  const allPartners = [...partners, ...partners, ...partners];
+  const allPartners = [...partners, ...partners, ...partners, ...partners, ...partners];
 
   return (
     <section
       id="partners"
       ref={sectionRef}
-      className="bg-linear-to-b from-[#0f172a] to-[#132840] text-white py-20 overflow-hidden"
+      className="bg-linear-to-b from-[#0f172a] to-[#132840] text-white pt-20 overflow-hidden"
     >
       <div className="container">
         {/* Section Header */}
@@ -104,9 +94,9 @@ const PartnersSection = () => {
         </div>
 
         {/* Small label */}
-        <p className="text-center text-white! text-sm uppercase tracking-widest mb-8">
+        {/* <p className="text-center text-white! text-sm uppercase tracking-widest mb-8">
           Proudly Using Quality Brands
-        </p>
+        </p> */}
       </div>
 
       {/* Partner Logo Slider */}
@@ -117,13 +107,13 @@ const PartnersSection = () => {
 
         <div
           ref={sliderRef}
-          className="flex gap-12 items-center py-8"
+          className="flex gap-12 items-center pt-8"
           style={{ width: "fit-content" }}
         >
           {allPartners.map((partner, index) => (
             <div
               key={index}
-              className="partner-slide shrink-0 p-5 hover:border-[#10b981] hover:bg-white/20 transition-all group cursor-pointer"
+              className="partner-slide shrink-0 p-5 transition-all group cursor-pointer"
             >
               <div className="flex flex-col items-center justify-start">
                 <div>{partner.logo}</div>
@@ -132,9 +122,9 @@ const PartnersSection = () => {
                   {partner.name}
                 </div> */}
 
-                <div className="text-sm text-white/80 text-center max-w-[150px]">
+                {/* <div className="text-sm text-white/80 text-center max-w-[150px]">
                   {partner.role}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

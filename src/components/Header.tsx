@@ -32,7 +32,7 @@ const Header = () => {
     { name: "FAQ", href: "#faq" },
   ];
 
-  const whatsappNumber = "+6588888888";
+  const whatsappNumber = "+6591218788";
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=Hi, I'm interested in Anti-Leak Bathroom Renewal services.`;
 
   return (

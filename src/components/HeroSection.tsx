@@ -39,7 +39,7 @@ const HeroSection = () => {
       );
   }, []);
 
-  const whatsappNumber = "+6588888888";
+  const whatsappNumber = "+6591218788";
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=Hi, I'd like to book a free site assessment for bathroom renewal.`;
 
   const trustBadges = [
@@ -85,7 +85,7 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="text-[#34d399]! hero-headline mb-3 lg:mb-6 leading-tight">
-            Don't Just Renovate.{" "} <br />
+            Don't Just Renovate. <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#34d399] to-[#10b981]">
               Eliminate Leaks Permanently.
             </span>

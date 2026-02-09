@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const whatsappNumber = "+6588888888";
+  const whatsappNumber = "+6591218788";
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`;
 
   const navLinks = [

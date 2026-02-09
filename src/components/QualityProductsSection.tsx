@@ -33,7 +33,7 @@ const QualityProductsSection = () => {
           trigger: section,
           start: "top 80%",
         },
-      }
+      },
     );
 
     // Logo cards animation
@@ -51,39 +51,39 @@ const QualityProductsSection = () => {
           trigger: section,
           start: "top 70%",
         },
-      }
+      },
     );
   }, []);
 
   const qualityProducts = [
     {
       name: "Davco",
-      description: "Premium Waterproofing Membrane",
+      website: "https://sgp.sika.com/en/serp.html?q=davco&box=Top",
       logo: Davco,
     },
     {
       name: "Dreb",
-      description: "Industrial Sealants",
+      website: "https://jimei.com.my/",
       logo: Dreb,
     },
     {
       name: "Hafary",
-      description: "Quality Tiles & Finishes",
+      website: "https://www.hafary.com.sg/",
       logo: Hafary,
     },
     {
       name: "Quicseal",
-      description: "Professional Sealants",
+      website: "https://ardex-quicseal.com/",
       logo: Quicseal,
     },
     {
       name: "Warrior",
-      description: "Construction Chemicals",
+      website: "https://www.warrior.com.sg/",
       logo: Warrior,
     },
     {
       name: "Weber",
-      description: "Building Materials",
+      website: "https://www.weber-marine.com/",
       logo: Weber,
     },
   ];
@@ -100,12 +100,10 @@ const QualityProductsSection = () => {
           <span className="section-label text-[#10b981]">
             Premium Materials
           </span>
-          <h2 className="text-slate-800! mb-4">
-            We Use Only Quality Products
-          </h2>
+          <h2 className="text-slate-800! mb-4">We Use Only Quality Products</h2>
           <p className="text-slate-600! max-w-2xl mx-auto">
-            Your bathroom deserves the best. We partner with industry-leading 
-            brands to ensure every waterproofing job is done with premium-grade 
+            Your bathroom deserves the best. We partner with industry-leading
+            brands to ensure every waterproofing job is done with premium-grade
             materials that last for years.
           </p>
         </div>
@@ -126,14 +124,19 @@ const QualityProductsSection = () => {
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>
-                
+
                 {/* Product Info */}
                 <h4 className="text-slate-800 font-semibold text-lg mb-1 group-hover:text-[#10b981] transition-colors">
                   {product.name}
                 </h4>
-                <p className="text-slate-500 text-xs text-center">
-                  {product.description}
-                </p>
+                <a
+                  href={product.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 text-slate-500 text-xs text-center hover:text-[#10b981] transition-color"
+                >
+                  Official Website
+                </a>
               </div>
             </div>
           ))}
@@ -142,7 +145,11 @@ const QualityProductsSection = () => {
         {/* Trust Badge */}
         <div className="mt-12 text-center">
           <p className="text-slate-500 text-sm">
-            Trusted by over <span className="text-[#10b981] font-semibold">500+ homeowners</span> in Singapore
+            Trusted by over{" "}
+            <span className="text-[#10b981] font-semibold">
+              500+ homeowners
+            </span>{" "}
+            in Singapore
           </p>
         </div>
       </div>
