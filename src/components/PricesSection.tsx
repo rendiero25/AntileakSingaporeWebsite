@@ -69,7 +69,7 @@ const PricesSection = () => {
     {
       icon: FaShower,
       title: "HDB Bathroom (Exposed Pipe)",
-      price: "$6,500",
+      price: "$7,900",
       pipeType: "exposed",
       features: [
         "Hack and dispose 1 bathroom floor and wall tiles including all accessories",
@@ -86,8 +86,8 @@ const PricesSection = () => {
     {
       icon: FaTint,
       title: "HDB 2 Bathrooms (Exposed Pipe)",
-      price: "$11,900",
-      originalPrice: "$13,000",
+      price: "$12,500",
+      originalPrice: "$15,800",
       pipeType: "exposed",
       highlight: true,
       features: [
@@ -105,7 +105,7 @@ const PricesSection = () => {
     {
       icon: FaWrench,
       title: "HDB Bathroom (Concealed Pipe)",
-      price: "$7,500",
+      price: "$8,800",
       pipeType: "concealed",
       features: [
         "Hack and dispose 1 bathroom floor and wall tiles including all accessories",
@@ -122,8 +122,8 @@ const PricesSection = () => {
     {
       icon: FaCheckCircle,
       title: "HDB 2 Bathrooms (Concealed Pipe)",
-      price: "$13,800",
-      originalPrice: "$15,000",
+      price: "$13,500",
+      originalPrice: "$17,600",
       pipeType: "concealed",
       highlight: true,
       features: [
@@ -149,22 +149,22 @@ const PricesSection = () => {
     <section
       id="prices"
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+      className="py-20 bg-linear-to-b from-[#0f172a] to-[#132840] text-white relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#2563eb] to-[#1e3a5f] opacity-5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-[#2563eb] to-[#1e3a5f] opacity-5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#2563eb] to-[#1e3a5f] opacity-10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-[#2563eb] to-[#1e3a5f] opacity-10 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
 
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="section-header text-center mb-12">
-          <span className="inline-block px-4 py-2 bg-[#2563eb]/10 text-[#2563eb] text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-2 bg-[#2563eb]/20 text-[#10b981] text-sm font-semibold rounded-full mb-4">
             Transparent Pricing
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our <span className="text-[#2563eb]">Packages</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white/70 max-w-2xl mx-auto text-white!">
             Complete bathroom renewal solutions with no hidden costs. All prices
             include materials, labour, and professional installation.
           </p>
@@ -205,14 +205,14 @@ const PricesSection = () => {
         </div>
 
         {/* Price Grid */}
-        <div className="price-grid grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="price-grid grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {filteredPackages.map((pkg, index) => (
             <div
               key={index}
-              className={`price-card group relative bg-white rounded-2xl p-6 border-2 transition-all duration-300 hover:shadow-2xl ${
+              className={`price-card group relative bg-white hover:bg-white/95 rounded-2xl p-6 border-2 transition-all duration-300 ease-out hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(37,99,235,0.3)] cursor-pointer ${
                 pkg.highlight
-                  ? "border-[#2563eb] shadow-xl shadow-[#2563eb]/10"
-                  : "border-gray-100 hover:border-[#2563eb]/50"
+                  ? "border-[#2563eb] shadow-xl shadow-[#2563eb]/20 hover:border-[#10b981] hover:shadow-[0_20px_40px_rgba(16,185,129,0.4)]"
+                  : "border-gray-100 hover:border-[#2563eb] hover:shadow-[0_20px_40px_rgba(37,99,235,0.25)]"
               }`}
             >
               {/* Popular Badge */}
@@ -297,11 +297,11 @@ const PricesSection = () => {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <p className="text-gray-500 text-sm">
+          <p className="text-white! text-sm">
             * Prices are subject to site inspection. Additional charges may
             apply for special requirements.
           </p>
-          <p className="text-gray-500 text-sm mt-2">
+          <p className="text-white! text-sm mt-2">
             * Tiles and sanitary fittings are not included in the package price.
           </p>
         </div>

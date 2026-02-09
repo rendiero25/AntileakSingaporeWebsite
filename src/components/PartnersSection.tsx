@@ -1,9 +1,15 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Kohler from "../assets/partnersLogo/kohler.png";
-import Grohe from "../assets/partnersLogo/grohe.png";
+import Davco from "../assets/partnersLogo/davco.png";
+import Dreb from "../assets/partnersLogo/dreb.png";
 import Duravit from "../assets/partnersLogo/duravit.png";
+import Grohe from "../assets/partnersLogo/grohe.png";
+import Hafary from "../assets/partnersLogo/hafary.png";
+import Kohler from "../assets/partnersLogo/kohler.png";
+import Quicseal from "../assets/partnersLogo/quicseal.png";
+import Warrior from "../assets/partnersLogo/warrior.png";
+import Weber from "../assets/partnersLogo/weber.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +48,7 @@ const PartnersSection = () => {
 
     gsap.to(slider, {
       x: -totalWidth / 2,
-      duration: 20,
+      duration: 30,
       ease: "none",
       repeat: -1,
     });
@@ -50,43 +56,82 @@ const PartnersSection = () => {
 
   const partners = [
     {
-      name: "Kohler",
-      role: "Premium Bathroom Fixtures",
+      name: "Davco",
       logo: (
-        <img src={Kohler} alt="Kohler Logo" className="w-50 object-cover" />
+        <img src={Davco} alt="Davco Logo" className="w-50 object-contain" />
+      ),
+    },
+    {
+      name: "Dreb",
+      logo: <img src={Dreb} alt="Dreb Logo" className="w-50 object-contain" />,
+    },
+    {
+      name: "Duravit",
+      logo: (
+        <img src={Duravit} alt="Duravit Logo" className="w-50 object-contain" />
       ),
     },
     {
       name: "Grohe",
-      role: "Quality Faucets & Showers",
-      logo: <img src={Grohe} alt="Grohe Logo" className="w-50 object-cover" />,
+      logo: (
+        <img src={Grohe} alt="Grohe Logo" className="w-50 object-contain" />
+      ),
     },
     {
-      name: "Duravit",
-      role: "Designer Bathroom Ceramics",
+      name: "Hafary",
       logo: (
-        <img src={Duravit} alt="Duravit Logo" className="w-50 object-cover" />
+        <img src={Hafary} alt="Hafary Logo" className="w-50 object-contain" />
+      ),
+    },
+    {
+      name: "Kohler",
+      logo: (
+        <img src={Kohler} alt="Kohler Logo" className="w-50 object-contain" />
+      ),
+    },
+    {
+      name: "Quicseal",
+      logo: (
+        <img
+          src={Quicseal}
+          alt="Quicseal Logo"
+          className="w-40 object-contain"
+        />
+      ),
+    },
+    {
+      name: "Warrior",
+      logo: (
+        <img src={Warrior} alt="Warrior Logo" className="w-40 object-contain" />
+      ),
+    },
+    {
+      name: "Weber",
+      logo: (
+        <img src={Weber} alt="Weber Logo" className="w-40 object-contain" />
       ),
     },
   ];
 
   // Duplicate partners for infinite scroll
-  const allPartners = [...partners, ...partners, ...partners, ...partners, ...partners];
+  const allPartners = [...partners, ...partners, ...partners];
 
   return (
     <section
       id="partners"
       ref={sectionRef}
-      className="bg-linear-to-b from-[#0f172a] to-[#132840] text-white pt-20 overflow-hidden"
+      className="bg-white text-slate-800 py-20 overflow-hidden"
     >
       <div className="container">
         {/* Section Header */}
         <div className="section-header text-center mb-12">
           <span className="section-label text-[#10b981]">
-            Industrial Partners
+            Premium Materials Only
           </span>
-          <h2 className="text-white! mb-4">Global Quality. Zero Compromise.</h2>
-          <p className="text-white/70! max-w-2xl mx-auto">
+          <h2 className="text-slate-800! mb-4">
+            Global Quality. Zero Compromise.
+          </h2>
+          <p className="text-slate-600! max-w-2xl mx-auto">
             We are proud to work with global leaders to bring the best tools and
             waterproofing materials to your home. Every layer of your bathroom
             is built using industrial-grade solutions.
