@@ -164,10 +164,10 @@ const PricesSection = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-2 xl:gap-4 mb-12 bg">
           <button
             onClick={() => setActiveFilter("all")}
-            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+            className={`px-4 xl:px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               activeFilter === "all"
                 ? "bg-[#2563eb] text-white shadow-lg shadow-[#2563eb]/30"
                 : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
@@ -177,7 +177,7 @@ const PricesSection = () => {
           </button>
           <button
             onClick={() => setActiveFilter("exposed")}
-            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+            className={`px-4 xl:px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               activeFilter === "exposed"
                 ? "bg-[#2563eb] text-white shadow-lg shadow-[#2563eb]/30"
                 : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
@@ -187,7 +187,7 @@ const PricesSection = () => {
           </button>
           <button
             onClick={() => setActiveFilter("concealed")}
-            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+            className={`px-4 xl:px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               activeFilter === "concealed"
                 ? "bg-[#2563eb] text-white shadow-lg shadow-[#2563eb]/30"
                 : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"

@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import ProblemSection from "./components/ProblemSection";
 import PricesSection from "./components/PricesSection";
+import QualityProductsSection from "./components/QualityProductsSection";
 import PartnersSection from "./components/PartnersSection";
 import ComparisonTable from "./components/ComparisonTable";
 import ProcessSection from "./components/ProcessSection";
@@ -66,6 +67,9 @@ function App() {
 
         {/* Unique Selling Proposition Section */}
         <PricesSection />
+
+        {/* Quality Products Section */}
+        <QualityProductsSection />
 
         {/* Industrial Partners Section */}
         <PartnersSection />

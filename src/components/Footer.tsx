@@ -72,11 +72,11 @@ const Footer = () => {
               </div>
               <div>
                 <span className="font-heading font-bold text-xl text-white">
-                  AntiLeak SG
+                  RENO EXPRESS
                 </span>
-                <span className="block text-xs text-white/60">
+                {/* <span className="block text-xs text-white/60">
                   Bathroom Renewal Specialist
-                </span>
+                </span> */}
               </div>
             </a>
 
@@ -179,7 +179,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/50 text-sm text-center md:text-left">
-            © {currentYear} AntiLeak SG. All rights reserved. Singapore's
+            © {currentYear} Reno Express. All rights reserved. Singapore's
             Anti-Leak Bathroom Specialist | developed by{" "}
             <a
               href="https://www.rendiero.site"
