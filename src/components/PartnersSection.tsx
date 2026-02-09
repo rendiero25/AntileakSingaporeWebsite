@@ -16,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 const PartnersSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
+  const tweenRef = useRef<gsap.core.Tween | null>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -46,7 +47,7 @@ const PartnersSection = () => {
       0,
     );
 
-    gsap.to(slider, {
+    tweenRef.current = gsap.to(slider, {
       x: -totalWidth / 2,
       duration: 30,
       ease: "none",
@@ -54,43 +55,58 @@ const PartnersSection = () => {
     });
   }, []);
 
+  const handleMouseEnter = () => {
+    tweenRef.current?.pause();
+  };
+
+  const handleMouseLeave = () => {
+    tweenRef.current?.resume();
+  };
+
   const partners = [
     {
       name: "Davco",
+      website: "https://sgp.sika.com/en/serp.html?q=davco&box=Top",
       logo: (
         <img src={Davco} alt="Davco Logo" className="w-50 object-contain" />
       ),
     },
     {
       name: "Dreb",
+      website: "https://jimei.com.my/",
       logo: <img src={Dreb} alt="Dreb Logo" className="w-50 object-contain" />,
     },
     {
       name: "Duravit",
+      website: "https://www.duravit.com/en-en/",
       logo: (
         <img src={Duravit} alt="Duravit Logo" className="w-50 object-contain" />
       ),
     },
     {
       name: "Grohe",
+      website: "https://www.grohe.sg/en_sg/",
       logo: (
         <img src={Grohe} alt="Grohe Logo" className="w-50 object-contain" />
       ),
     },
     {
       name: "Hafary",
+      website: "https://www.hafary.com.sg/",
       logo: (
         <img src={Hafary} alt="Hafary Logo" className="w-50 object-contain" />
       ),
     },
     {
       name: "Kohler",
+      website: "https://www.kohler.com.sg/",
       logo: (
         <img src={Kohler} alt="Kohler Logo" className="w-50 object-contain" />
       ),
     },
     {
       name: "Quicseal",
+      website: "https://ardex-quicseal.com/",
       logo: (
         <img
           src={Quicseal}
@@ -101,12 +117,14 @@ const PartnersSection = () => {
     },
     {
       name: "Warrior",
+      website: "https://www.warrior.com.sg/",
       logo: (
         <img src={Warrior} alt="Warrior Logo" className="w-40 object-contain" />
       ),
     },
     {
       name: "Weber",
+      website: "https://www.weber-marine.com/",
       logo: (
         <img src={Weber} alt="Weber Logo" className="w-40 object-contain" />
       ),
@@ -154,6 +172,8 @@ const PartnersSection = () => {
           ref={sliderRef}
           className="flex gap-12 items-center pt-8"
           style={{ width: "fit-content" }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {allPartners.map((partner, index) => (
             <div
@@ -163,13 +183,14 @@ const PartnersSection = () => {
               <div className="flex flex-col items-center justify-start">
                 <div>{partner.logo}</div>
 
-                {/* <div className="text-2xl font-bold text-white group-hover:text-[#10b981] transition-colors">
-                  {partner.name}
-                </div> */}
-
-                {/* <div className="text-sm text-white/80 text-center max-w-[150px]">
-                  {partner.role}
-                </div> */}
+                <a
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 text-sm text-slate-500 hover:text-[#10b981] transition-colors"
+                >
+                  Official Website
+                </a>
               </div>
             </div>
           ))}
