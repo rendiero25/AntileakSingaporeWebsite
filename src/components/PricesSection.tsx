@@ -9,6 +9,7 @@ interface PricePackage {
   icon: React.ElementType;
   title: string;
   price: string;
+  priceTwo: string;
   originalPrice?: string;
   features: string[];
   highlight?: boolean;
@@ -69,73 +70,81 @@ const PricesSection = () => {
     {
       icon: FaShower,
       title: "HDB Bathroom (Exposed Pipe)",
-      price: "$7,900",
+      price: "Standard Market Range: S$9,800 - S$11,500",
+      priceTwo: "Our Package: S$8,500",
       pipeType: "exposed",
       features: [
-        "Hack and dispose 1 bathroom floor and wall tiles including all accessories",
-        "Labour to tile 1 bathroom floor and wall",
-        "Labour to waterproof 1 bathroom floor",
-        "Supply of quality waterproofing and cement materials",
-        "Plumbing works for 1 bathroom using exposed cold stainless steel pipe including installation of: 1 instant heater shower set, 1 toilet bowl, 1 basin and tap, 1 bidet hand spray, 1 toilet roll holder",
-        "Uploading materials to site with lift access",
-        "Heavy-duty protective sheet for material storage",
-        "Disposal of all materials and debris after work is completed",
-        "General chemical cleaning for bathroom",
+        "Full hacking of floor & wall tiles",
+        "Professional re-tiling (floor + wall)",
+        "Full-layer waterproofing system",
+        "Instant heater shower installation",
+        "New toilet bowl installation",
+        "Basin + tap installation",
+        "Heavy-duty site protection",
+        "Full debris disposal",
+        "Chemical cleaning before handover",
+        "17 - 20 Day Completion"
       ],
     },
     {
       icon: FaTint,
       title: "HDB 2 Bathrooms (Exposed Pipe)",
-      price: "$12,500",
-      originalPrice: "$15,800",
+      price: "S$15,000",
+      priceTwo: "",
+      originalPrice: "S$17,000",
       pipeType: "exposed",
       highlight: true,
       features: [
-        "Hack and dispose 2 bathrooms floor and wall tiles including all accessories",
-        "Labour to tile 2 bathrooms floor and wall",
-        "Labour to waterproof 2 bathrooms floor",
-        "Supply of quality waterproofing and cement materials",
-        "Plumbing works for 2 bathrooms using exposed cold stainless steel pipe including installation of: 2 instant heater shower sets, 2 toilet bowls, 2 basins and taps, 2 bidet hand sprays, 2 toilet roll holders",
-        "Uploading materials to site with lift access",
-        "Heavy-duty protective sheet for material storage",
-        "Disposal of all materials and debris after work is completed",
-        "General chemical cleaning for bathroom",
+        "Full hacking of floor & wall tiles",
+        "Professional re-tiling (floor + wall)",
+        "Full-layer waterproofing system",
+        "Instant heater shower installation",
+        "New toilet bowl installation",
+        "Basin + tap installation",
+        "Heavy-duty site protection",
+        "Full debris disposal",
+        "Chemical cleaning before handover",
+        "25 - 30 Day Completion"
       ],
     },
     {
       icon: FaWrench,
       title: "HDB Bathroom (Concealed Pipe)",
-      price: "$8,800",
+      price: "Standard Market Range: S$10,600 - S$12,800.",
+      priceTwo: "Our Package: S$9,200",
       pipeType: "concealed",
       features: [
-        "Hack and dispose 1 bathroom floor and wall tiles including all accessories",
-        "Labour to tile 1 bathroom floor and wall",
-        "Labour to waterproof 1 bathroom floor",
-        "Supply of quality waterproofing and cement materials",
-        "Plumbing works for 1 bathroom using concealed copper pipe including installation of: 1 shower mixer set, 1 toilet bowl, 1 basin and tap (cold water only), 1 bidet hand spray, 1 toilet roll holder",
-        "Uploading materials to site with lift access",
-        "Heavy-duty protective sheet for material storage",
-        "Disposal of all materials and debris after work is completed",
-        "General chemical cleaning for bathroom",
+        "Full hacking of floor & wall tiles",
+        "Professional re-tiling (floor + wall)",
+        "Full-layer waterproofing system",
+        "Instant heater shower installation",
+        "New toilet bowl installation",
+        "Basin + tap installation",
+        "Heavy-duty site protection",
+        "Full debris disposal",
+        "Chemical cleaning before handover",
+        "17 - 20 Day Completion"
       ],
     },
     {
       icon: FaCheckCircle,
       title: "HDB 2 Bathrooms (Concealed Pipe)",
-      price: "$13,500",
-      originalPrice: "$17,600",
+      price: "S$16,200",
+      priceTwo: "",
+      originalPrice: "S$18,400",
       pipeType: "concealed",
       highlight: true,
       features: [
-        "Hack and dispose 2 bathrooms floor and wall tiles including all accessories",
-        "Labour to tile 2 bathrooms floor and wall",
-        "Labour to waterproof 2 bathrooms floor",
-        "Supply of quality waterproofing and cement materials",
-        "Plumbing works for 2 bathrooms using concealed copper pipe including installation of: 2 shower mixer sets, 2 toilet bowls, 2 basins and taps, 2 bidet hand sprays, 2 toilet roll holders, 1 storage heater",
-        "Uploading materials to site with lift access",
-        "Heavy-duty protective sheet for material storage",
-        "Disposal of all materials and debris after work is completed",
-        "General chemical cleaning for bathroom",
+        "Full hacking of floor & wall tiles",
+        "Professional re-tiling (floor + wall)",
+        "Full-layer waterproofing system",
+        "Instant heater shower installation",
+        "New toilet bowl installation",
+        "Basin + tap installation",
+        "Heavy-duty site protection",
+        "Full debris disposal",
+        "Chemical cleaning before handover",
+        "25 - 30 Day Completion"
       ],
     },
   ];
@@ -158,15 +167,16 @@ const PricesSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="section-header text-center mb-12">
-          <span className="inline-block px-4 py-2 bg-[#2563eb]/20 text-[#10b981] text-sm font-semibold rounded-full mb-4">
+          {/* <span className="inline-block px-4 py-2 bg-[#2563eb]/20 text-[#10b981] text-sm font-semibold rounded-full mb-4">
             Transparent Pricing
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our <span className="text-[#2563eb]">Packages</span>
+          </span> */}
+          <h2 className="text-4xl md:text-5xl font-bold text-white! mb-4">
+            Leak-Proof <span className="text-[#2563eb]">Bathroom Packages</span>
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto text-white!">
-            Complete bathroom renewal solutions with no hidden costs. All prices
-            include materials, labour, and professional installation.
+            Leak-Proof Bathroom Packages - Fixed Price Zero Surprises <br />
+            Everything Included. Nothing hidden. Built to last.d price, zero surprises. <br />
+            Only 3 slots available per month to ensure quality control.
           </p>
         </div>
 
@@ -205,11 +215,11 @@ const PricesSection = () => {
         </div>
 
         {/* Price Grid */}
-        <div className="price-grid grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="price-grid grid md:grid-cols-2 xl:grid-cols-4 gap-8 items-stretch">
           {filteredPackages.map((pkg, index) => (
             <div
               key={index}
-              className={`price-card group relative bg-white hover:bg-white/95 rounded-2xl p-6 border-2 transition-all duration-300 ease-out hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(37,99,235,0.3)] cursor-pointer ${
+              className={`price-card group relative bg-white hover:bg-white/95 rounded-2xl p-6 border-2 transition-all duration-300 ease-out hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(37,99,235,0.3)] cursor-pointer flex flex-col ${
                 pkg.highlight
                   ? "border-[#2563eb] shadow-xl shadow-[#2563eb]/20 hover:border-[#10b981] hover:shadow-[0_20px_40px_rgba(16,185,129,0.4)]"
                   : "border-gray-100 hover:border-[#2563eb] hover:shadow-[0_20px_40px_rgba(37,99,235,0.25)]"
@@ -242,7 +252,7 @@ const PricesSection = () => {
 
               {/* Pipe Type Badge */}
               <span
-                className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-4 ${
+                className={`inline-block px-3 py-1 mt-2 text-xs font-medium rounded-full mb-4 w-fit ${
                   pkg.pipeType === "exposed"
                     ? "bg-orange-100 text-orange-700"
                     : "bg-purple-100 text-purple-700"
@@ -255,18 +265,29 @@ const PricesSection = () => {
 
               {/* Price */}
               <div className="mb-6">
-                {pkg.originalPrice && (
-                  <span className="text-gray-400 line-through text-lg mr-2">
-                    {pkg.originalPrice}
-                  </span>
+                {pkg.originalPrice ? (
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-gray-400 line-through text-lg">
+                      {pkg.originalPrice}
+                    </span>
+                    <span className="text-3xl font-bold text-[#2563eb]">
+                      {pkg.price}
+                    </span>
+                  </div>
+                ) : (
+                  <p className="text-sm font-medium text-[#1e3a5f]">
+                    {pkg.price}
+                  </p>
                 )}
-                <span className="text-3xl font-bold text-[#2563eb]">
-                  {pkg.price}
-                </span>
+                {pkg.priceTwo && (
+                  <p className="text-3xl! font-bold! text-[#2563eb]!">
+                    {pkg.priceTwo}
+                  </p>
+                )}
               </div>
 
               {/* Features */}
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-3 mb-6 flex-grow">
                 {pkg.features.map((feature, fIndex) => (
                   <li
                     key={fIndex}
